@@ -1,0 +1,21 @@
+import java.util.*;
+import java.io.*;
+
+class Lemonadetwo {
+       public static void main(String[] args) {
+        /// I don't know your variables so I just this empty for you to declare what you used.
+
+  int day = 1; 
+  int sD = 7;
+  int fD = 14;
+  int tD = 2;;  
+   
+   System.out.println("Welcome to Lemonade Stand Game! You have 7,14, or 21 days to make as much money as possible! A few things you'll have to deal with include the weather, tempermental customers, and the recipe it's self!");
+   System.out.println("How many days would you like to play?");
+      if (tD) = true; {
+      System.out.println("Proceed to 7 Day Game!");
+      else
+      System.out.println("Choose a number 14 or 21 to begin your Day count!");
+      }
+   }
+}      
