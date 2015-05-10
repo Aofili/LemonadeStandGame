@@ -1,21 +1,66 @@
-import java.util.*;
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
-class Lemonadetwo {
-       public static void main(String[] args) {
-        /// I don't know your variables so I just this empty for you to declare what you used.
+public class Lemonade {
+     // Getter and Setters 
+    private double temp = Math.random()*40 + 60;
+   private int currentDay = 1;
+    private int money = 50;
 
-  int day = 1; 
-  int sD = 7;
-  int fD = 14;
-  int tD = 2;;  
-   
-   System.out.println("Welcome to Lemonade Stand Game! You have 7,14, or 21 days to make as much money as possible! A few things you'll have to deal with include the weather, tempermental customers, and the recipe it's self!");
-   System.out.println("How many days would you like to play?");
-      if (tD) = true; {
-      System.out.println("Proceed to 7 Day Game!");
-      else
-      System.out.println("Choose a number 14 or 21 to begin your Day count!");
-      }
-   }
-}      
+    public int getMaxDays() {
+        return maxDays;
+    }
+
+    public void setMaxDays(int maxDays) {
+        this.maxDays = maxDays;
+    }
+
+    private int maxDays;
+
+    public double getTemp() {
+        return temp;
+    }
+
+    public void setTemp(double temp) {
+        this.temp = temp;
+    }
+
+    public int getCurrentDay() {
+        return currentDay;
+    }
+
+    public void setCurrentDay(int currentDay) {
+        this.currentDay = currentDay;
+    }
+
+    public int getMoney() {
+        return money;
+    }
+
+    public void setMoney(int money) {
+        this.money = money;
+    }
+
+
+    public static void main(String[] args) throws IOException {
+        Lemonade lemon = new Lemonade();
+        System.out.println("Welcome to Lemonade Stand Game! You have 7,14, or 21 days to make as much money as possible! A few things you'll have to deal with include the weather, tempermental customers, and the recipe it's self!");
+        System.out.println("How many days would you like to play?");
+        BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+        String userInput = in.readLine();
+        int days = Integer.parseInt(userInput);
+
+        while (days != 7 && days != 14 && days != 21)) {
+           System.out.println("Please enter 7, 14, or 21");
+            days = Integer.parseInt(in.readLine());
+        }
+        lemon.setMaxDays(days);
+        String msg;
+        msg = "Day " + lemon.getCurrentDay() + "\n";
+        msg += "Money: " + lemon.getMoney() + "\n";
+        msg += "Temperature: " + String.format("%.2f", lemon.getTemp()) + "\n";
+        System.out.println(msg);
+    }
+}
+
